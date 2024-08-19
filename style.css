@@ -160,10 +160,10 @@
     }
     @media (max-width:450px){
         body{
-            height: 130vh;
+            height: 100vh;
         }
         .contact-form{
-            margin: 100px 0px 100px 0;
+            margin: 10px 0px 10px 0;
             width: 90%;
         }
         .contact-form .form-item-group{
