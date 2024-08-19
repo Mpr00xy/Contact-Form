@@ -1,0 +1,183 @@
+/* Start Global Rules */
+:root {
+    /* Primary */
+
+    --Green200: hsl(148, 38%, 91%);
+    --Green600: hsl(169, 82%, 27%);
+    --Red: hsl(0, 66%, 54%);
+
+    /* Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    --Grey500: hsl(186, 15%, 59%);
+    ---Grey900: hsl(187, 24%, 22%);
+
+    /* Typography */
+
+    --bodyFontSize: 16px;
+  }
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    }
+    body {
+        font-family: "Karla", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-size: var(--bodyFontSize);
+        background-color: var(--Green200);
+        font-size: 16px;
+    }
+    html {
+    scroll-behavior: smooth;
+    }
+    /* End Global Rules */
+
+    /*Start Form Section */
+    .contact-form {
+        background-color: var(--White);
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 2em;
+        border-radius: 1rem;
+        margin: 1rem;
+    }
+    input[type='text'],
+    input[type='email'],
+    textarea{
+        width: 100%;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        outline: 0.1rem solid var(---Grey900);
+    }
+    input[type='text']:focus,
+    input[type='email']:focus,
+    textarea:focus {
+         outline: 1px solid var(--Green600);
+}
+    .contact-form .container .form-alert{
+        color: var(--Red);
+        margin-top: 0.5em;
+        display: none;
+    }
+    .contact-form h1{
+        color: var(---Grey900);
+        margin-bottom: 1.25rem;
+    }
+    .contact-form .container .form-item {
+        margin-bottom: 1.5rem;
+    }
+    .contact-form .form-item-group{
+        display: flex;
+        gap: 1rem;
+    }
+    .contact-form .form-item:nth-child(4) .radio-inputs {
+        margin-top: 0.5rem;
+        display: flex;
+        gap: 1rem;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .contact-form .form-item:nth-child(4) .radio-option{
+        cursor: pointer;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        outline: 1px solid var(--Grey500);
+        border-radius: 5px;
+    }
+    .contact-form .form-item:nth-child(4) input[type= 'radio']{
+        appearance: none;
+        width: 0.5rem;
+        height: 0.5rem;
+        outline: 2px solid var(--Green600);
+        outline-offset: 3px;
+        border-radius: 50%;
+    }
+    .contact-form .form-item:nth-child(4) input[type='radio']:checked{
+        background-color: var(--Green600);
+    }
+    .contact-form .form-item:nth-child(5){
+        margin-bottom:2rem ;
+    }
+    .contact-form .form-item:nth-child(5) div{
+        display: flex;
+        gap: 1rem;
+    }
+    .contact-form .form-item:nth-child(4) .radio-option label{
+        cursor: pointer;
+    }
+    .contact-form .form-item:nth-child(6){
+        margin-bottom: 2rem;
+    }
+    .contact-form .form-item:nth-child(6) div{
+        display: flex;
+        gap: 1rem;
+    }
+    .contact-form .form-item:nth-child(6) input[type='checkbox']{
+        cursor: pointer;
+        accent-color: green ;
+    }
+    .contact-form .btn-submit {
+        cursor: pointer;
+        background-color: var(--Green600);
+        color: var(--White);
+        width: 100%;
+        padding: .75rem;
+        border: 0;
+        outline: 0;
+        border-radius: .35rem;
+    }
+    .contact-form .btn-submit:hover{
+        background-color: var(---Grey900);
+    }
+    .contact-form .massage-success{
+        background-color:var(---Grey900);
+        color: var(--White);
+        width: max-content;
+        padding: 1rem;
+        position: fixed;
+        top: -8%;
+        left: 15%;
+        border-radius: 5px;
+        color: var(--White);
+        display: none;
+    }
+    @media (max-width:930px){
+        .contact-form{
+            width: 70%;
+        }
+    }
+    @media (max-width:450px){
+        body{
+            height: 130vh;
+        }
+        .contact-form{
+            margin: 100px 0px 100px 0;
+            width: 90%;
+        }
+        .contact-form .form-item-group{
+            flex-direction: column;
+        }
+            .contact-form .form-item:nth-child(4) .radio-inputs{
+                display: flex;
+                flex-direction: column;
+            }
+            .contact-form .massage-success{
+                font-size: 10px;
+                position: absolute;
+                top: -30px;
+                left: 50px;
+            }
+        }
+    /*End Form Section */
